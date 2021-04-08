@@ -47,12 +47,13 @@ def skel(directory, crop=None, flip='y'):
         skel = morphology.skeletonize_3d(im).astype('float32')*i
         print(str(i) + " completed at " + time.ctime())
         cat = cat+skel
-    if 'y' in flip:
-        cat = np.flip(cat, axis=1)
-    if 'x' in flip:
-        cat = np.flip(cat, axis=2)
-    if 'z' in flip:
-        cat = np.flip(cat, axis=0)
+    if flip:
+        if 'y' in flip:
+            cat = np.flip(cat, axis=1)
+        if 'x' in flip:
+            cat = np.flip(cat, axis=2)
+        if 'z' in flip:
+            cat = np.flip(cat, axis=0)
     io.imsave(os.path.join(directory, sample + '_ThresholdedSkeleton3D.tif'), cat, check_contrast=False)
     print("Finished " + sample + ' ' + time.ctime())
     return cat
