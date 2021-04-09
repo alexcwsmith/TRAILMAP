@@ -80,6 +80,6 @@ if __name__ == '__main__':
     p.add_argument('--flip',type=str,default=None,help='xyz axes to flip')
     p.add_argument('--dtype',type=np.dtype,default=None,help='NumPy dtype to save as')
     args = p.parse_args()
-    skel(args.directory, crop=args.crop, flip=args.flip, dtype=args.dtype)
+    Skeletonize3D(args.directory, crop=args.crop, flip=args.flip, dtype=args.dtype)
     
     
