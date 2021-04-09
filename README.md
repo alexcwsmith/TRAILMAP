@@ -70,6 +70,20 @@ python3 segment_brain_batch.py data/testing/example-chunk
 ```
 Note: Depending on the amount of GPU memory, you may need to lower the batch_size in the segment_brain.py file.
 
+
+##Skeletonization
+
+After segmentation, you can use TrailMap_Skeletonize3D.py to create a thresholded skeleton of the results.
+
+To run this, cd into the TRAILMAP directory and run:
+
+```
+python3 TrailMap_Skeletonize3D.py --directory=path/to/seg-images/
+```
+
+This function has optional parameters to crop or rotate the images, to and change the result image dtype. See the function docstring for details.
+
+ 
 ## Training
 
 If you would like to do transfer learning with your own examples, you must label some of your own data. The network takes in cubes with length of 64 pixels, so the training examples must be of this size. 
