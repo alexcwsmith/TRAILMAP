@@ -78,7 +78,8 @@ if __name__ == '__main__':
     p.add_argument('--directory',type=str,default=os.getcwd(),help='Directory with segmented images.')
     p.add_argument('--crop',type=dict,default=None,help='Dict with ImageJ-format cropping coordinates.')
     p.add_argument('--flip',type=str,default=None,help='xyz axes to flip')
+    p.add_argument('--dtype',type=np.dtype,default=None,help='NumPy dtype to save as')
     args = p.parse_args()
-    skel(args.directory, crop=args.crop, flip=args.flip)
+    skel(args.directory, crop=args.crop, flip=args.flip, dtype=args.dtype)
     
     
