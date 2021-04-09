@@ -71,7 +71,7 @@ python3 segment_brain_batch.py data/testing/example-chunk
 Note: Depending on the amount of GPU memory, you may need to lower the batch_size in the segment_brain.py file.
 
 
-##Skeletonization
+## Skeletonization
 
 After segmentation, you can use TrailMap_Skeletonize3D.py to create a thresholded skeleton of the results.
 
