@@ -7,7 +7,7 @@ import sys
 from PIL import Image
 
 # Will need to be adjusted depending on the GPU
-batch_size = 15
+batch_size = 60
 
 # Don't run network on chunks which don't have a value above threshold
 threshold = 0.01
