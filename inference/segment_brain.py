@@ -1,6 +1,7 @@
 from models.model import input_dim, output_dim
 import numpy as np
 import os
+os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 import time
 import cv2
 import sys
