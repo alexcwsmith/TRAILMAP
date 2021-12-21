@@ -7,11 +7,9 @@ Created on Fri Sep 18 14:14:35 2020
 """
 
 import os
-import skimage
 from skimage import io
 from skimage import morphology
 import numpy as np
-from scipy import ndimage
 import time
 import argparse
 
